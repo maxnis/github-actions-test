@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: write a string
-        run: echo "Hello Github Actions"
+        run: ecxho "Hello Github Actions"
       - name: multiline script
         run: |
           node -v
