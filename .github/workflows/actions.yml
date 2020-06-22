@@ -1,6 +1,6 @@
 name: Actions Workflow
 
-on: 
+on:
   pull_request:
     types: [opened, assigned, reopened]
 
@@ -17,7 +17,7 @@ jobs:
           echo "Commit Id: $GITHUB_SHA"
           echo "Repository: $GITHUB_REPOSITORY"
           echo "Workspace: $GITHUB_WORKSPACE"
-          echo "Branch: $GITHUB_REF"
+          echo "Reference: $GITHUB_REF"
           # git clone git@github:$GITHUB_REPOSITORY
           # git checkout $GITHUB_SHA
       - name: Checkout
