@@ -7,8 +7,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: write a string
-        run: ecxho "Hello Github Actions"
+        run: echo "Hello Github Actions"
       - name: multiline script
         run: |
           node -v
           npm -v
+        name: python commands
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
+  run-win-commands:
+    runs-on: windows-latest
+    needs: ["run-shell-command"]
+    steps:
+      - name: Directory PowerShell
+        run: Get-Location
+      - name: Directory Bash
+        run: pwd
+        shell: bash
